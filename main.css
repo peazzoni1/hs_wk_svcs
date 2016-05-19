@@ -1,0 +1,124 @@
+html, body {
+
+  padding: 0px;
+  margin: 0px;
+}
+
+#lineBreak{
+  margin-top: .25em;
+  margin-bottom: .25em;
+  margin-left: 0;
+  width: 230px;
+  border-color: #1678bf;
+}
+
+#logo {
+  width: 40%;
+  color: white;
+  padding-left: 5%;
+  padding-top: .5%;
+  font-size: 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+#about {
+  position: relative;
+  background: linear-gradient(to bottom right, #fefefe 70%, #ffffff  );
+  height: 520px;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 35px;
+}
+
+#container {
+  color: #3e3e3e;
+  position: absolute;
+  top: 58%;
+  left: 40%;
+  margin: -11% 0 0 -35%;
+  width: 650px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px #4e4d4d;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #3e3e3e;
+}
+
+#content {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+#heroSection {
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  margin: -11% 0 0 15%;
+  color: #3e3e3e;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  text-align: justify;;
+}
+
+.btn {
+  background-color: #2ecc71;
+}
+#bottomMenu {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(196, 196, 196);
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-item {
+  background:rgb(226, 226, 226);
+  padding: 1px;
+  width: 285px;
+  height: 100px;
+  margin-top: 5px;
+  line-height: 100px;
+  color: #3e3e3e;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 2em;
+  text-align: center;
+}
+
+.navigation {
+  list-style: none;
+  background: rgba(45, 45, 45, 0.9);
+  display: flex;
+
+}
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 30px;
+  color: white;
+  width: 250px;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1.25em;
+}
+.navigation a:hover {
+  background: darken(deepskybluergb(168, 168, 168), 2%);
+}
+.navigation a {
+    text-align: center;
+  }
+.navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}

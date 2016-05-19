@@ -1,0 +1,12 @@
+{
+  "name": "markdown-app",
+  "version": "0.0.1",
+  "description": "markdown-app",
+  "main": "server.js",
+  "author": "Aaron",
+  "dependencies": {
+
+    "express": "~4.7.2"
+
+  }
+}
