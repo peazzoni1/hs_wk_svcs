@@ -9,15 +9,15 @@
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-  <script></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 </head>
 <body>
     <ul class="navigation">
         <li id="logo">High School To Work <hr id="lineBreak"> <span style="text-align:center">Transition Services</li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#about">Home</a></li>
+        <li><a href="#contact">About</a></li>
+        <li><a href="#questions">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
     <div id="about">
         <div id="container">
@@ -30,11 +30,11 @@
         </div>
     </div>
     <ul class="flex-container bottom-menu">
-      <li class="flex-item menu-button">News</li>
-      <li class="flex-item menu-button">Services</li>
-      <li class="flex-item menu-button">Resources</li>
-      <li class="flex-item menu-button">Forms</li>
-      <li class="flex-item menu-button">Featured Worksites</li>
+      <a class="flex-item menu-button" href="#news"><li>News</li></a>
+      <a class="flex-item menu-button" href="#services"><li>Services</li></a>
+      <a class="flex-item menu-button" href="#resources"><li>Resources</li></a>
+      <a class="flex-item menu-button" href="#forms"><li>Forms</li><a/>
+      <a class="flex-item menu-button" href="#partners"><li>Featured Worksites</li></a> 
     </ul>
   <div id="newsSection">
     <ul class="flex-container">
@@ -65,8 +65,23 @@
   <div id="resources">
     Resources
   </div>
-  <div id="faq">
+  <div class="faq">
     Frequently Asked Questions
+    <ul id="questions">
+      <li><em><strong>I'm interested to find out if my student is a candidate for the program, How do I get started?</em></strong><br>
+      Please contact us to schedule a meeting.</li>
+      <br>
+      <li><em><strong>What age can students begin Transitional Employment?</em></strong><br>
+      Students as young as 16 may be eligble.</li>
+      <br>
+      <li><em><strong>Is transportation provided to worksites?</em></strong><br>
+      Yes. Transportation is arranged through the school.</li>
+      <br>
+      <li><em><strong>Does employment continue through the Summer?</em></strong><br>
+      In some cases a student may be able to work year round.</li>
+      <br>
+      <li><em><strong>How long does it take for a student to join a worksite?</em></strong><br>
+      The process typically takes about 2 months from the initial assessment.</li>
   </div>
   <div id="forms">
     Forms
@@ -80,5 +95,20 @@
       Get in Touch
     </div>
   </div>
+  <script>
+      $(document).ready(function(){
+      $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 1000, function(){
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>

@@ -1,9 +1,13 @@
+/*** Globals ***/
+
 html, body {
   height: 100%;
   padding: 0px;
   margin: 0px;
   background-color: rgb(255, 255, 255)
 }
+
+/**** Header and Navigation ****/
 
 .navigation {
   list-style: none;
@@ -48,6 +52,8 @@ html, body {
   border-color: #1678bf;
 }
 
+/*** Homepage container ***/
+
 #about {
   position: relative;
   background: #ffffff;
@@ -87,34 +93,7 @@ html, body {
   color: #ffffff;
 }
 
-.service-icon {
-  padding-top: 5%;
-  width: 300px;
-  z-index: 10;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-}
-
-.fa-lightbulb-o {
-  color: rgb(255, 214, 0);
-}
-
-.fa-cogs {
-  color: #1678bf;
-}
-
-.fa-level-up {
-  color: rgb(255, 161, 0);
-}
-
-.fa-thumbs-o-up {
-  color: rgb(3, 184, 0);
-}
-
-.fa-bar-chart {
-  color: rgb(71, 170, 167);
-}
+/* Bottom menu buttons */
 
 .bottom-menu {
   width: 100%;
@@ -138,6 +117,8 @@ li.menu-button:hover {
   background-color: #303030;
   color: #ffffff;
 }
+
+/*** News Section ***/
 
 #newsSection {
   background-image: url("blurred-background.jpg");
@@ -184,15 +165,48 @@ li.menu-button:hover {
   margin-left: 10%;
 }
 
+/*** Services Section ***/
+
 #services {
   height: 650px;
   width: 100%;
   background-color: #ffffff;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  font-size: 4em;
+  font-size: 3em;
   text-align: center;
 }
+
+.service-icon {
+  padding-top: 5%;
+  width: 300px;
+  z-index: 10;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.fa-lightbulb-o {
+  color: rgb(255, 214, 0);
+}
+
+.fa-cogs {
+  color: #1678bf;
+}
+
+.fa-level-up {
+  color: rgb(255, 161, 0);
+}
+
+.fa-thumbs-o-up {
+  color: rgb(3, 184, 0);
+}
+
+.fa-bar-chart {
+  color: rgb(71, 170, 167);
+}
+
+/*** Resources Section ***/
 
 #resources {
   height: 400px;
@@ -205,7 +219,9 @@ li.menu-button:hover {
   text-align: center;
 }
 
-#faq {
+/*** FAQ Section ***/
+
+.faq {
   height: 700px;
   width: 100%;
   background-color: #ffffff;
@@ -213,6 +229,13 @@ li.menu-button:hover {
   font-weight: 300;
   font-size: 3em;
   text-align: center;
+}
+
+#questions {
+  font-size: 20px;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 40px;
 }
 
 #forms {
@@ -225,6 +248,8 @@ li.menu-button:hover {
   text-align: center;
 }
 
+/*** Partner Worksites Section ***/
+
 #partners {
   height: 700px;
   width: 100%;
@@ -234,6 +259,8 @@ li.menu-button:hover {
   font-size: 3em;
   text-align: center;
 }
+
+/*** Contact Form ***/
 
 #contact {
   height: 800px;
