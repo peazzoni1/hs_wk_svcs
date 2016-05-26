@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -10,14 +11,25 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+  <!-- load angular via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-resource.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.min.js"></script>
+
+  <script src="app.js"></script>
+  <script src="routes.js"></script>
+  <script src="controller.js"></script>
+
 </head>
-<body>
+<body ng-app="App" ng-controller="ScrollController">
     <ul class="navigation">
         <li id="logo">High School To Work <hr id="lineBreak"> <span style="text-align:center">Transition Services</li>
         <li><a href="#about">Home</a></li>
         <li><a href="#contact">About</a></li>
-        <li><a href="#questions">FAQ</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a ng-click="gotoHash()" href="#questions">FAQ</a></li>
+        <li><a ng-click="gotoHash()" href="#contact_form">Contact</a></li>
     </ul>
     <div id="about">
         <div id="container">
@@ -25,7 +37,7 @@
             <span style="text-align:center">Work Experience Opportunities <br> for Students with Disabilities <br></span>
             <span style="font-size: 22px"><em><strong>Transitional Employment</strong></em> provides special education students the opportunity to <br>make informed decisions
             about their future as they transition from school to work.<br>
-            <button type="button" id="button">Learn more</button>
+            <button type="button" id="hero_button">Learn more</button>
           </div>
         </div>
     </div>
@@ -34,81 +46,62 @@
       <a class="flex-item menu-button" href="#services"><li>Services</li></a>
       <a class="flex-item menu-button" href="#resources"><li>Resources</li></a>
       <a class="flex-item menu-button" href="#forms"><li>Forms</li><a/>
-      <a class="flex-item menu-button" href="#partners"><li>Featured Worksites</li></a> 
+      <a class="flex-item menu-button" href="#partners"><li>Featured Worksites</li></a>
     </ul>
-  <div id="newsSection">
-    <ul class="flex-container">
-      <li id="newsDetail" class="flex-item newsContent">Governor Tom Wolf approves <span style="color: #1678bf"><em>Work Experience for High School <br>
-        Students with Disabilities Act.</em></span> <br>Read more here.</li>
-      <li id="newsBox" class="flex-item newsContent">News</li>
-    </ul>
-  </div>
   <div id="services">
     Services
     <div id="wrapContainer">
       <ul class="flex-container">
-        <li class="flex-item service-icon"><i class="fa fa-lightbulb-o fa-4x" aria-hidden="true"></i> <br> Career Internships <br><span style="font-size:16px; font-weight:300">For students who have a <br>
+        <li class="flex-item service-icon"><i class="fa fa-lightbulb-o fa-3x" aria-hidden="true"></i> <br> Career Internships <br><span style="font-size:16px; font-weight:300">For students who have a <br>
           specific career goal to explore</span><br><span style="font-size: 14px; color:rgba(45, 45, 45, 0.9)"> Learn more</span></li>
-        <li class="flex-item service-icon"><i class="fa fa-cogs fa-4x" aria-hidden="true"></i> <br> Work Study Programs <br><span style="font-size:16px; font-weight:300">For students who wish to build<br>
+        <li class="flex-item service-icon"><i class="fa fa-cogs fa-3x" aria-hidden="true"></i> <br> Work Study Programs <br><span style="font-size:16px; font-weight:300">For students who wish to build<br>
           a foundation of employment skills</span><br><span style="font-size: 14px; color:rgba(45, 45, 45, 0.9)"> Learn more</span></li>
-        <li class="flex-item service-icon"><i class="fa fa-graduation-cap fa-4x" aria-hidden="true"></i> <br>Graduation Credit <br><span style="font-size:16px; font-weight:300"> Students meet academic obligations<br>
+        <li class="flex-item service-icon"><i class="fa fa-graduation-cap fa-3x" aria-hidden="true"></i> <br>Graduation Credit <br><span style="font-size:16px; font-weight:300"> Students meet academic obligations<br>
           in partnership with local worksites</span><br><span style="font-size: 14px; color:rgba(45, 45, 45, 0.9)"> Learn more</span></li>
-        <li class="flex-item service-icon"><i class="fa fa-level-up fa-4x" aria-hidden="true"></i> <br> Transition Planning <br><span style="font-size:16px; font-weight:300">Plans are developed based on levels<br>
+        <li class="flex-item service-icon"><i class="fa fa-level-up fa-3x" aria-hidden="true"></i> <br> Transition Planning <br><span style="font-size:16px; font-weight:300">Plans are developed based on levels<br>
           of functioning, goals and interests</span><br><span style="font-size: 14px; color:rgba(45, 45, 45, 0.9)"> Learn more</span></li>
-        <li class="flex-item service-icon"><i class="fa fa-thumbs-o-up fa-4x" aria-hidden="true"></i> <br> Job Coaching <br><span style="font-size:16px; font-weight:300">Students receive support to help transfer<br>
+        <li class="flex-item service-icon"><i class="fa fa-thumbs-o-up fa-3x" aria-hidden="true"></i> <br> Job Coaching <br><span style="font-size:16px; font-weight:300">Students receive support to help transfer<br>
           soft skills from the classroom to the job</span><br><span style="font-size: 14px; color:rgba(45, 45, 45, 0.9)"> Learn more</span></li>
-        <li class="flex-item service-icon"><i class="fa fa-bar-chart fa-4x" aria-hidden="true"></i> <br>Skill Assessments <br><span style="font-size:16px; font-weight:300"> Evaluations in areas of soft skills,<br>
+        <li class="flex-item service-icon"><i class="fa fa-bar-chart fa-3x" aria-hidden="true"></i> <br>Skill Assessments <br><span style="font-size:16px; font-weight:300"> Evaluations in areas of soft skills,<br>
          work quality and independence</span><br><span style="font-size: 14px; color:rgba(45, 45, 45, 0.9)"> Learn more</span></li>
       </ul>
     </div>
   </div>
+  <div class="faq">
+    Frequently Asked Questions
+    <a ui-sref="home" data-target="#home" class="btn btn-default">Parents</a>
+    <a ui-sref="teachers" data-target="#teachers" class="btn btn-primary">Teachers</a>
+    <a ui-sref="employers" data-target="#employers" class="btn btn-danger">Employers</a>
+    <div ui-view></div>
+  </div>
   <div id="resources">
     Resources
   </div>
-  <div class="faq">
-    Frequently Asked Questions
-    <ul id="questions">
-      <li><em><strong>I'm interested to find out if my student is a candidate for the program, How do I get started?</em></strong><br>
-      Please contact us to schedule a meeting.</li>
-      <br>
-      <li><em><strong>What age can students begin Transitional Employment?</em></strong><br>
-      Students as young as 16 may be eligble.</li>
-      <br>
-      <li><em><strong>Is transportation provided to worksites?</em></strong><br>
-      Yes. Transportation is arranged through the school.</li>
-      <br>
-      <li><em><strong>Does employment continue through the Summer?</em></strong><br>
-      In some cases a student may be able to work year round.</li>
-      <br>
-      <li><em><strong>How long does it take for a student to join a worksite?</em></strong><br>
-      The process typically takes about 2 months from the initial assessment.</li>
-  </div>
-  <div id="forms">
-    Forms
+  <div id="newsSection">
+    <ul class="flex-container">
+      <li id="newsDetail" class="flex-item newsContent">Governor Tom Wolf approves <span style="color: #1678bf"><em>Work Experience for High School <br>
+        Students with Disabilities Act.</em></span> <br>Read more <a target="_blank" href="http://www.legis.state.pa.us/cfdocs/legis/li/uconsCheck.cfm?yr=2016&sessInd=0&act=26">here.</a></li>
+      <li id="newsBox" class="flex-item newsContent">News</li>
+    </ul>
   </div>
   <div id=partners>
     Featured Worksites
   </div>
-  <div id="contact">
-    Contact
-    <div id="form">
-      Get in Touch
+  <div id="contact_form">
+      <h1>Get in Touch</h1>
+      <form method="post" action="contact.php" id="form_fields">
+        <div>
+          <input type="name" name="name" id="name"placeholder="Your name">
+        </div>
+        <div>
+          <input type="email" name="email" id="email" placeholder="Your email">
+        </div>
+        <div>
+          <textarea name="message" id="message" placeholder="Message..."></textarea>
+        </div>
+        <br>
+        <button type="submit" id="form_button">Submit</button>
+      </form>
     </div>
-  </div>
-  <script>
-      $(document).ready(function(){
-      $("a").on('click', function(event) {
-        if (this.hash !== "") {
-          event.preventDefault();
-          var hash = this.hash;
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 1000, function(){
-            window.location.hash = hash;
-          });
-        }
-      });
-    });
-  </script>
 </body>
 </html>

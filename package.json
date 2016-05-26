@@ -5,8 +5,7 @@
   "main": "server.js",
   "author": "Aaron",
   "dependencies": {
-
-    "express": "~4.7.2"
-
+    "express": "~4.7.2",
+    "node-php-server": "^0.1.2"
   }
 }
