@@ -4,7 +4,7 @@ html, body {
   height: 100%;
   padding: 0px;
   margin: 0px;
-  background-color: rgb(255, 255, 255)
+  background-color: #ffffff;
 }
 
 /**** Header and Navigation ****/
@@ -49,14 +49,17 @@ html, body {
   margin-bottom: .25em;
   margin-left: 0;
   width: 230px;
-  border-color: #1678bf;
+  border-color: #00A8E8;
 }
 
 /*** Homepage container ***/
 
 #about {
+  background-image:  linear-gradient(
+      rgba(0, 0, 0, 0.78),
+      rgba(0, 0, 0, 0.78)
+    ),url('studentPic.jpg');
   position: relative;
-  background: #ffffff;
   height: 74%;
   width: 100%;
   font-family: 'Open Sans', sans-serif;
@@ -65,31 +68,43 @@ html, body {
 }
 
 #container {
-  color: #3e3e3e;
+  color: #2d2d2d;
   position: absolute;
-  top: 35%;
-  left: 55%;
+  top: 42%;
+  left: 53%;
   margin: -11% 0 0 -35%;
   width: 900px;
   height: 400px;
 }
+
 #content {
-  padding-top: 30px;
-  padding-left: 40px;
-  padding-bottom: 60px;
-}
-#hero_button {
-  margin-top: 40px;
-  height: 50px;
-  width: 250px;
-  font-size: 20px;
+  padding-top: 40px;
+  padding-left: 30px;
+  padding-bottom: 50px;
   background-color: rgb(255, 255, 255);
-  border-color: rgb(61, 61, 61);
-  border-radius: 2px;
+  border-color: #CF5C36;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 2px;
+  z-index: 10;
 }
 
-#hero_button:hover {
-  background-color: #303030;
+a#hero_button {
+  margin-top: 40px;
+  padding: 2px 40px 2px 40px; ;
+  font-size: 20px;
+  color: #FFFFFF;
+  background-color: #007EA7;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #82B7BF;
+  cursor: pointer;
+
+}
+
+a#hero_button:hover {
+  background-color: #82B7BF;
   color: #ffffff;
 }
 
@@ -103,18 +118,20 @@ html, body {
 }
 
 .menu-button {
-  background:rgb(236, 234, 234);
+  background: #edecec;
   width: 19.75%;
   line-height: 90px;
-  color: #444343;
+  color: #2d2d2d;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 1.75em;
   text-align: center;
+
+  cursor: pointer;
 }
 
 li.menu-button:hover {
-  background-color: #303030;
+  background-color: #06637A;
   color: #ffffff;
 }
 
@@ -144,7 +161,8 @@ li.menu-button:hover {
   width: 300px;
   border-color: #ffffff;
   border-style: solid;
-  border-width: 15px;
+  border-width: 5px;
+  border-radius: 3px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 5em;
@@ -167,8 +185,9 @@ li.menu-button:hover {
 
 /*** Services Section ***/
 
-#services {
-  height: 650px;
+.services {
+  margin-top: 3%;
+  height: 720px;;
   width: 100%;
   background-color: #ffffff;
   font-family: 'Open Sans', sans-serif;
@@ -177,8 +196,24 @@ li.menu-button:hover {
   text-align: center;
 }
 
+.service_detail {
+  height: 720px;
+  width: 100%;
+  background-color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 20%;
+}
+
+.learn-more{
+font-size: 14px;
+color:rgba(45, 45, 45, 0.9);
+}
+
 .service-icon {
-  padding-top: 5%;
+  padding: 5% 0 5% 0;
   width: 300px;
   z-index: 10;
   font-family: 'Open Sans', sans-serif;
@@ -212,7 +247,7 @@ li.menu-button:hover {
   height: 400px;
   width: 100%;
   color: #ffffff;
-  background-color: rgba(45, 45, 45, 0.9);
+  background-color: #007EA7;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 3em;
@@ -221,7 +256,7 @@ li.menu-button:hover {
 
 /*** FAQ Section ***/
 
-.faq {
+#faq {
   height: 700px;
   width: 100%;
   background-color: #ffffff;
@@ -232,11 +267,16 @@ li.menu-button:hover {
   box-shadow: 0 0 5px  rgba(107, 107, 107, 0.8);
 }
 
+.btn-default {
+  margin: 0 5% 0 5%;
+  border-color: #00A8E8 !important;
+  border-style: solid !important;
+}
+
 .questions {
   font-size: 20px;
   text-align: left;
-  margin-top: 20px;
-  margin-left: 40px;
+  margin: 40px 0 0 25%;
 }
 
 #form {
@@ -263,8 +303,13 @@ li.menu-button:hover {
 
 /*** Contact Form ***/
 
-h1 {
-  padding-top: 15px;
+h1.h1 {
+  color: #007EA7;
+  padding-top: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1.25em;
+  text-align: center;
 }
 
 #contact_form {
