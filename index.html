@@ -15,10 +15,10 @@
 <body>
     <ul class="navigation">
         <li id="logo">High School To Work <hr id="lineBreak"> <span style="text-align:center">Transition Services</li>
-        <li><a href="#about">Home</a></li>
-        <li><a href="#contact">About</a></li>
+        <li><a href="#navigation">Home</a></li>
+        <li><a href="#contact_form">About</a></li>
         <li><a href="#contact_form">Contact</a></li>
-        <li><a href="#news">News</a></li>
+        <li><a href="#newsSection">News</a></li>
     </ul>
     <div id="about">
         <div id="container">
@@ -48,8 +48,25 @@
     </div>
 
     <div id="resources">
-      <h1 class="h1"><span style="color: #FFFFFF">Resources</span></h1>
+      <ul class="flex-container">
+        <div class="flex-item resource-containers">
+          <h1 class="h1"><span style="color: #FFFFFF">Resources</span></h1>
+            <a target="_blank" href="http://thearcalliance.org/" class="resource-items">The Arc Alliance</a>
+            <a target="_blank" href="http://www.portal.state.pa.us/portal/server.pt/community/vocational_rehabilitation/10356" class="resource-items">Office of Vocational Rehab</a>
+            <a target="_blank" href="http://www.montcopa.org/150/Behavioral-HealthDevelopmental-Disabilit" class="resource-items">Behavorial Health / Developmental Disabilities</a> 
+
+        </div>
+        <div class="flex-item resource-containers">
+          <h1 class="h1"><span style="color: #FFFFFF">Forms</span></h1>
+
+        </div>
+      </ul>
     </div>
+
+    <div id=partners>
+      <h1 class="h1">Featured Worksites</h1>
+    </div>
+
     <div id="newsSection">
       <ul class="flex-container">
         <li id="newsDetail" class="flex-item newsContent">Governor Tom Wolf approves <span style="color: #82A8BF"><em>Work Experience for High School <br>
@@ -57,9 +74,7 @@
         <li id="newsBox" class="flex-item newsContent">News</li>
       </ul>
     </div>
-    <div id=partners>
-      <h1 class="h1">Featured Worksites</h1>
-    </div>
+
     <div id="contact_form">
         <h1 class="h1">Get in Touch</h1>
         <form method="post" action="contact.php" id="form_fields">
