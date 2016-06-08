@@ -10,7 +10,7 @@ html, body {
 h1.h1 {
   margin-top: -15px;
   padding-top: 20px;
-  color: #007EA7;
+  color: rgba(45, 45, 45, 0.9);
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 1.25em;
@@ -21,34 +21,34 @@ h1.h1 {
 
 .navigation {
   list-style: none;
-  background: rgba(45, 45, 45, 0.9);
+  background: #ffffff;
   display: flex;
   width: 100%;
-  height: 13%;
-
+  height: 12%;
 }
+
 .navigation a {
   text-decoration: none;
   display: block;
   padding: 30px;
-  color: white;
+  color: rgba(45, 45, 45, 0.9);
   width: 250px;
-  height: 50px;
+  height: 40px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  font-size: 1.35em;
+  font-size: 1.75em;
+  cursor: pointer;
 }
+
 .navigation a:hover {
-  color: rgb(204, 204, 204)
+  color: #00A8E8;
+  text-decoration: none;
 }
-.navigation a {
-    text-align: center;
-  }
 
 #logo {
   width: 40%;
-  color: white;
-  padding-top: .5%;
+  color: rgba(45, 45, 45, 0.9);
+  padding-top: .3%;
   font-size: 25px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -92,7 +92,7 @@ h1.h1 {
   padding-left: 30px;
   padding-bottom: 50px;
   background-color: rgb(255, 255, 255);
-  border-color: #CF5C36;
+  border-color: rgba(45, 45, 45, 0.9);
   border-radius: 3px;
   border-style: solid;
   border-width: 2px;
@@ -101,21 +101,20 @@ h1.h1 {
 
 a#hero_button {
   margin-top: 40px;
-  padding: 2px 40px 2px 40px; ;
+  padding: 4px 50px 4px 50px;
   font-size: 20px;
-  color: #FFFFFF;
-  background-color: #007EA7;
-  border-radius: 3px;
+  color: rgba(45, 45, 45, 0.9);
+  background-color: #ffffff;
+  border-radius: 1px;
   border-style: solid;
   border-width: 1px;
-  border-color: #82B7BF;
+  border-color: rgba(45, 45, 45, 0.9);
   cursor: pointer;
-
 }
 
 a#hero_button:hover {
-  background-color: #82B7BF;
-  color: #ffffff;
+  border-width: 2px;
+  text-decoration: none;
 }
 
 /* Bottom menu buttons */
@@ -124,25 +123,26 @@ a#hero_button:hover {
   width: 100%;
   height: 13.1%;
   background-color: #ffffff;
-  box-shadow: 0 10px 6px -6px #777;
+  border-bottom: thick solid #00A8E8;,
 }
 
 .menu-button {
-  background: #edecec;
+  background: #ffffff;
   width: 19.75%;
   line-height: 90px;
-  color: #2d2d2d;
+  color: rgba(45, 45, 45, 0.9);
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 1.75em;
   text-align: center;
-
   cursor: pointer;
 }
 
-li.menu-button:hover {
-  background-color: #06637A;
-  color: #ffffff;
+.menu-button:hover {
+  border-color: rgba(45, 45, 45, 0.9);
+  border-style: solid;
+  border-width: 1px;
+  text-decoration: none;
 }
 
 /*** News Section ***/
@@ -204,6 +204,7 @@ li.menu-button:hover {
   font-weight: 300;
   font-size: 3em;
   text-align: center;
+  border-bottom: thick solid #00A8E8;,
 }
 
 .service_detail {
@@ -211,7 +212,7 @@ li.menu-button:hover {
   background-color: #ffffff;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  font-size: 1.5em;
+  font-size: 1.25em;
   text-align: center;
 }
 
@@ -225,9 +226,22 @@ li.menu-button:hover {
   padding: 20px 0 0 0;
 }
 
-.learn-more{
-font-size: 14px;
-color:rgba(45, 45, 45, 0.9);
+.learn-more-btn{
+  padding: 5px 20px 5px 20px;
+  font-size: 15px;
+  color: rgba(45, 45, 45, 0.9);
+  background-color: #ffffff;
+  border-radius: 1px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(45, 45, 45, 0.9);
+  cursor: pointer;
+}
+
+.learn-more-btn:hover {
+  border-width: 2px;
+  text-decoration: none;
+  color: black;
 }
 
 .service-icon {
@@ -295,7 +309,7 @@ color:rgba(45, 45, 45, 0.9);
 /*** FAQ Section ***/
 
 #faq {
-  margin-top: 5%;
+  margin-top: 3%;
   height: 700px;
   width: 100%;
   background-color: #ffffff;
@@ -303,7 +317,6 @@ color:rgba(45, 45, 45, 0.9);
   font-weight: 300;
   font-size: 3em;
   text-align: center;
-  box-shadow: 0 0 5px  rgba(107, 107, 107, 0.8);
 }
 
 .btn-default {
