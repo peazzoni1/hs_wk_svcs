@@ -1,10 +1,8 @@
-//*** load partials ****
 
-$('#services-container').load('Partials/Services/partial-service-home.html');
+//**** faq button actions ****
 
 $('#faq-container').load('Partials/Faq/partial-faq-parents.html');
 
-//**** faq button actions ****
 
 $('#parents').click(function() {
   $('#faq-container').load('Partials/Faq/partial-faq-parents.html');
@@ -21,36 +19,56 @@ $('#employers').click(function() {
 //**** services button actions ****
 
 $(document).on('click', ".backBtn", function() {
-  $('#services-container').load('Partials/Services/partial-service-home.html');
+  $('#modal-container').css('display: none');
 });
 
 $(document).on('click', ".careers", function() {
-  setTimeout(function() {
-    $('#services-container').load('Partials/Services/partial-service-career.html')
-  }, 150);
+    $('#modal-container').load('Partials/Services/partial-service-career.html');
 });
 
 $(document).on('click', ".work", function() {
-  $('#services-container').load('Partials/Services/partial-service-work.html');
+  $('#modal-container').load('Partials/Services/partial-service-work.html');
 });
 
 $(document).on('click', ".grad", function() {
-  $('#services-container').load('Partials/Services/partial-service-grad.html');
+  $('#modal-container').load('Partials/Services/partial-service-grad.html');
 });
 
 $(document).on('click', ".planning", function() {
-  $('#services-container').load('Partials/Services/partial-service-planning.html');
+  $('#modal-container').load('Partials/Services/partial-service-planning.html');
 });
 
 $(document).on('click', ".coaching", function() {
-  $('#services-container').load('Partials/Services/partial-service-coaching.html');
+  $('#modal-container').load('Partials/Services/partial-service-coaching.html');
 });
 
 $(document).on('click', ".assess", function() {
-  $('#services-container').load('Partials/Services/partial-service-assess.html');
+  $('#modal-container').load('Partials/Services/partial-service-assess.html');
 });
 
+//Worksite list
 
+var list = ['Philadelphia Freedom Valley YMCA', 'Spring Valley YMCA', 'Linfield National Golf Club', 'Wonder Years Preschool', 'The Arc Alliance',
+'Upper Schuylkill Valley Park', 'Chick-fil-A','PA Insert Corporations','Sebastian Riding Associates','Sodexo at Ursinus','Firebirds Grille', 'Kiddie Academy',
+'Flanagan’s Preschool', 'One Village Coffee','JLI Electronicslectronics', 'Philadelphia Rock Gym', 'Keyser Miller Ford','Evansburg State Park',
+'Rolling Turf Golf Course', 'Montgomery County Parks', 'Green Lane', 'Philly Fades Barber Shop', 'Shoemaker Welding', 'Allied Wire and Cable', 'Philly Drums',
+'Bikesport', 'Ott’s hardscape/landscape','Luciani Construction','Carpet Craft', 'Hair Cuttery', 'Wendy’s', 'Redners Markets','Reading Phillies',
+'Trappe Fire and EMS','3 Paper Dolls', 'Atlantic Printing', 'Slick Ideas Marketing','Trappe Historical Society', 'Art Fusion 19464',
+'Interstate Building Maintenance', 'Perkiomen Township', 'Indian Valley YMCA', 'Montgomery County SPCA', 'Wegman’s', 'Giant Food',
+'Royersford Historical Society', 'Bon Homie, LTD','Meadowood Senior Living', 'petfooddirect.com'];
+
+var list = list.sort();
+
+for (i= 0; i < list.length; i++) {
+  if(i % 2 !== 0 ) {
+  $('#worksite-list').append("<li class='worksite-list-item'>" + list[i] + "</li>");
+}
+  else {
+  $('#worksite-list').append("<li class='worksite-list-item'>" + "<span style='color:#00A8E8'>" + list[i] + "</span>" + "</li>");
+}
+}
+
+//Contact Form
 $(function() {
     // Get the form.
     var form = $('#form_fields');
