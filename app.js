@@ -19,32 +19,33 @@ $('#employers').click(function() {
 //**** services button actions ****
 
 $(document).on('click', ".backBtn", function() {
-  $('#modal-container').css('display: none');
+    $('#modal-container').fadeOut('slow');
 });
 
 $(document).on('click', ".careers", function() {
-    $('#modal-container').load('Partials/Services/partial-service-career.html');
+    $('#modal-container').fadeIn('slow').load('Partials/Services/partial-service-career.html');
 });
 
 $(document).on('click', ".work", function() {
-  $('#modal-container').load('Partials/Services/partial-service-work.html');
+  $('#modal-container').fadeIn('slow').load('Partials/Services/partial-service-work.html');
 });
 
 $(document).on('click', ".grad", function() {
-  $('#modal-container').load('Partials/Services/partial-service-grad.html');
+  $('#modal-container').fadeIn('slow').load('Partials/Services/partial-service-grad.html');
 });
 
 $(document).on('click', ".planning", function() {
-  $('#modal-container').load('Partials/Services/partial-service-planning.html');
+  $('#modal-container').fadeIn('slow').load('Partials/Services/partial-service-planning.html');
 });
 
 $(document).on('click', ".coaching", function() {
-  $('#modal-container').load('Partials/Services/partial-service-coaching.html');
+  $('#modal-container').fadeIn('slow').load('Partials/Services/partial-service-coaching.html');
 });
 
 $(document).on('click', ".assess", function() {
-  $('#modal-container').load('Partials/Services/partial-service-assess.html');
+  $('#modal-container').fadeIn('slow').load('Partials/Services/partial-service-assess.html');
 });
+
 
 //Worksite list
 

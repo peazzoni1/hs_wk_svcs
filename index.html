@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8"/>
   <title>Highschool To Work Transition Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.js" type='text/css'>
   <link rel="stylesheet" href="main.css">
   <link href='Roboto-Thin.ttf' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
@@ -27,12 +28,12 @@
     <div id="about">
         <div id="container">
           <div id="main-content-panel">
-            <span style="font-family: 'Noto Serif', serif; text-align:center; color: #00A8E8">Work Experience Opportunities <br> for Students with Disabilities <br></span>
+            <span style="font-family: 'Noto Serif', serif; color: #00A8E8">Work Experience Opportunities <br> for Students with Disabilities <br></span>
             <div id="main-panel-text">
               <span style="font-size: 18px"><strong>Transitional Employment</strong> provides special education students the opportunity to make informed decisions
               about their future as they transition from school to work.</span>
             </div>
-            <div>
+            <div id="button-container">
             <a type="button" id="main-panel-button">More</a>
             </div>
           </div>
@@ -49,22 +50,22 @@
     <div id="services-container">
       <div class="services">
         <div id="service-title-box">Services</div>
-          <div id="service-subtitle">comprehensive support tailored to each student</div> 
+          <div id="service-subtitle">comprehensive support tailored to each student</div>
           <div id="modal-container" class="modal"></div>
             <div id="services-panel">
               <ul id="services-panel-blocks" class="flex-container">
-                <li class="flex-item service-icon"><i class="fa fa-lightbulb-o fa-3x" aria-hidden="true"></i> <br> Career Internships <br><span style="font-size:16px; font-weight:300">For students to explore various jobs <br>
-                  and careers through unpaid internships</span><br><br><a href="#modal-container" class="careers learn-more-btn">LEARN MORE</a></li>
+                <li class="flex-item service-icon"><i class="fa fa-lightbulb-o fa-3x" aria-hidden="true"></i><br> Career Internships <br><span style="font-size:16px; font-weight:300">For students to explore various jobs <br>
+                  and careers through unpaid internships</span><br><br><a href="#modal-container" class="careers learn-more-btn">Read More</a></li>
                 <li class="flex-item service-icon"><i class="fa fa-cogs fa-3x" aria-hidden="true"></i> <br> Work Study Programs <br><span style="font-size:16px; font-weight:300">For students to build skills<br>
-                  through part-time employment</span><br><br><a href="#modal-container" class="learn-more-btn work">LEARN MORE</a></li>
+                  through part-time employment</span><br><br><a href="#modal-container" class="learn-more-btn work">Read More</a></li>
                 <li class="flex-item service-icon"><i class="fa fa-graduation-cap fa-3x" aria-hidden="true"></i> <br>Academic Credit <br><span style="font-size:16px; font-weight:300"> Participating students earn credit <br>
-                  towards graduation while working</span><br><br><a  href="#modal-container" class="learn-more-btn grad">LEARN MORE</a></li>
+                  towards graduation while working</span><br><br><a  href="#modal-container" class="learn-more-btn grad">Read More</a></li>
                 <li class="flex-item service-icon"><i class="fa fa-level-up fa-3x" aria-hidden="true"></i> <br> Transition Planning <br><span style="font-size:16px; font-weight:300">IEP Teams develop individual plans to <br>
-                  help students attain realistic goals</span><br><br><a href="#modal-container" class="learn-more-btn planning">LEARN MORE</a></li>
+                  help students attain realistic goals</span><br><br><a href="#modal-container" class="learn-more-btn planning">Read More</a></li>
                 <li class="flex-item service-icon"><i class="fa fa-thumbs-o-up fa-3x" aria-hidden="true"></i> <br> Job Coaching <br><span style="font-size:16px; font-weight:300">Students receive support on <br> the job
-                  and useful feedback</span><br><br><a href="#modal-container" class="learn-more-btn coaching">LEARN MORE</a></li>
+                  and useful feedback</span><br><br><a href="#modal-container" class="learn-more-btn coaching">Read More</a></li>
                 <li class="flex-item service-icon"><i class="fa fa-bar-chart fa-3x" aria-hidden="true"></i> <br>Evaluations <br><span style="font-size:16px; font-weight:300"> Student performance on the <br>
-                  job is evaluated regularly</span><br><br><a href="#modal-container" class="learn-more-btn assess ">LEARN MORE</a></li>
+                  job is evaluated regularly</span><br><br><a href="#modal-container" class="learn-more-btn assess ">Read More</a></li>
               </ul>
             </div>
        </div>
@@ -82,12 +83,21 @@
       <ul class="flex-container">
         <div class="flex-item resource-containers">
           <h1 class="h1"><span style="color: #FFFFFF">Resources</span></h1>
-            <a target="_blank" href="http://thearcalliance.org/" class="resource-items">The Arc Alliance</a>
-            <a target="_blank" href="http://www.portal.state.pa.us/portal/server.pt/community/vocational_rehabilitation/10356" class="resource-items">Office of Vocational Rehab</a>
-            <a target="_blank" href="http://www.montcopa.org/150/Behavioral-HealthDevelopmental-Disabilit" class="resource-items">Behavorial Health / Developmental Disabilities</a>
+            <div id="resources-text">Learn about other related services and <br>
+              programs for students with disabilities </div>
+            <br>
+            <div>
+              <a type="button" id="resource-button">Explore</a>
+            </div>
         </div>
         <div class="flex-item resource-containers">
           <h1 class="h1"><span style="color: #FFFFFF">Forms</span></h1>
+            <div id="resources-text">Links to various forms for students,<br>
+              parents and administrators</div>
+            <br>
+            <div>
+              <a type="button" id="resource-button">View Forms</a>
+            </div>
         </div>
       </ul>
     </div>
@@ -107,20 +117,24 @@
     </div>
 
     <div id="contact_form">
-        <h1 class="h1">Get in Touch</h1>
-        <form method="post" action="contact.php" id="form_fields">
-          <div>
-            <input type="name" name="name" id="name"placeholder="Your name">
-          </div>
-          <div>
-            <input type="email" name="email" id="email" placeholder="Your email">
-          </div>
-          <div>
-            <textarea name="message" id="message" placeholder="Message..."></textarea>
-          </div>
-          <br>
-          <button type="submit" id="form_button">Submit</button>
-        </form>
+      <div class=flex-container>
+        <div class="flex-item">
+          <form method="post" action="contact.php" id="form_fields">
+            <div id="contact-label">Get in Touch</div>
+            <div>
+              <input type="name" name="name" id="name"placeholder=" Your name">
+            </div>
+            <div>
+              <input type="email" name="email" id="email" placeholder=" Your email">
+            </div>
+            <div>
+              <textarea name="message" id="message" placeholder=" Message..."></textarea>
+            </div>
+            <br>
+            <button type="submit" id="form_button">Submit</button>
+          </form>
+       </div>
+      </div>
     </div>
 
     <script src='app.js'></script>

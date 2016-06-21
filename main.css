@@ -9,7 +9,7 @@ html, body {
 }
 
 h1.h1 {
-  margin-top: -30px;
+  margin-top: 30px;
   padding-top: 5px;
   color: rgba(45, 45, 45, 0.9);
   font-family: 'Noto Serif', serif;
@@ -21,10 +21,11 @@ h1.h1 {
 
 .navigation {
   list-style: none;
-  background: #ffffff;
+  background: rgba(0, 0, 0, 0.2);
   display: flex;
   width: 100%;
-  height: 11%;
+  height: 12%;
+  padding: none;
 }
 
 .navigation a {
@@ -59,42 +60,48 @@ h1.h1 {
 #about {
   background-color: #ffffff;
   position: relative;
-  height: 75%;
+  height: 64%;
   width: 100%;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 40px;
-  border-bottom: thin solid rgba(45, 45, 45, 0.9);
-  border-top: thin solid rgba(45, 45, 45, 0.9);
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.78),
-      rgba(0, 0, 0, 0.78)
-    ),url('studentPic.jpg');
+  border-bottom: thin solid rgba(0, 0, 0, 0.2);
+
 }
 
 #main-content-panel {
-  text-align: center;
-  height: 450px;
+  background-image: url('lightbulbs.jpg');
+  background-size: 375px 375px;
+  background-repeat: no-repeat;
+  background-position: top right;
+  text-align: left;
+  height: 375px;
   width: 70%;
-  margin: 40px 15% 0 15%;
-  padding: 40px 30px 50px 30px;
-  background-color: #f8f8f8;
+  margin: 80px 15% 0 15%;
+  padding: 50px 30px 50px 30px;
+  background-color: #ffffff;
   border-bottom: thick solid #00A8E8;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-width: 1px;
   z-index: 10;
 }
 
 #main-panel-text {
-  text-align: justify !important;
-  margin-left: 30%;
+  text-align: left !important;
   margin-top: 2%;
   height: 150px;
-  width: 360px;
+  width: 500px;
   line-height: 25px;
 }
 
+#button-container {
+  float: right;
+  margin: -120px 60px 0 0;
+}
+
 a#main-panel-button {
-  margin-top: 40px;
-  padding: 10px 70px 10px 70px;
+  padding: 15px 80px 15px 80px;
   font-size: 20px;
   color: rgba(45, 45, 45, 0.9);
   background-color: #ffffff;
@@ -139,48 +146,6 @@ a#main-panel-button:hover {
   text-decoration: none;
 }
 
-/*** News Section ***/
-
-#newsSection {
-  background-image: url("blurred-background.jpg");
-  background-size: 100%;
-  height: 400px;
-  width: 100%;
-}
-
-.newsContent {
-  color: #ffffff;
-  margin: 3.5%;
-}
-
-#newsDetail {
-  font-weight: 300;
-  font-size: 2.5em;
-  height: 400px;
-  width: 500px;
-}
-
-#newsBox {
-  height: 300px;
-  width: 300px;
-  border-color: #ffffff;
-  border-style: solid;
-  border-width: 5px;
-  border-radius: 3px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-size: 5em;
-  text-align: center;
-  padding-top: 80px;
-}
-
-.flex-container {
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
 
 /*** Services Section ***/
 
@@ -203,13 +168,13 @@ a#main-panel-button:hover {
   font-weight: 300;
   font-size: 3em;
   text-align: center;
-  border-bottom: thin solid #2d2d2d;
+  border-bottom: thin solid rgba(0, 0, 0, 0.2);
 }
 
 #service-title-box {
   height: 80px;
   margin: 0 auto;
-  margin-top: 3%; 
+  margin-top: 3%;
   text-align: center;;
   color: rgba(45, 45, 45, 0.9);
   font-family: 'Noto Serif', serif;
@@ -255,7 +220,7 @@ div#services-panel {
 }
 
 .service-icon {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   padding-top: 3%;
   width: 300px;
   height: 300px;
@@ -272,6 +237,30 @@ div#services-panel {
 
 .service-icon:hover {
   border-color: #00A8E8;
+  color: #00A8E8;
+}
+
+.fa-lightbulb-o {
+  color: rgb(255, 214, 0);
+}
+
+.fa-cogs {
+  color: #1678bf;
+}
+
+.fa-graduation-cap {
+  color: rgb(0,0,0);
+}
+.fa-level-up {
+  color: rgb(255, 161, 0);
+}
+
+.fa-thumbs-o-up {
+  color: rgb(3, 184, 0);
+}
+
+.fa-bar-chart {
+  color: rgb(71, 170, 167);
 }
 
 .learn-more-btn{
@@ -283,7 +272,7 @@ div#services-panel {
   border-radius: 1px;
   border-style: solid;
   border-width: 1px;
-  border-color: rgba(89, 89, 89, 0.77);
+  border-color: rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
@@ -291,26 +280,6 @@ div#services-panel {
   border-color: black;
   text-decoration: none;
   color: black;
-}
-
-.fa-lightbulb-o {
-  color: rgb(255, 214, 0);
-}
-
-.fa-cogs {
-  color: #1678bf;
-}
-
-.fa-level-up {
-  color: rgb(255, 161, 0);
-}
-
-.fa-thumbs-o-up {
-  color: rgb(3, 184, 0);
-}
-
-.fa-bar-chart {
-  color: rgb(71, 170, 167);
 }
 
 /*** Resources Section ***/
@@ -328,16 +297,31 @@ div#services-panel {
 
 .resource-containers {
   width: 50%;
+  height: 300px;
 }
 
 .resource-items {
-  margin-top: 20px;
-  padding: 10px;
   font-size: .75em;
   color: #ffffff;
   border-color: #ffffff;
   border-style: solid;
   border-width: 1px;
+}
+
+#resources-text {
+  font-size: 20px;
+}
+
+#resource-button {
+  padding: 15px 80px 15px 80px;
+  font-size: 20px;
+  color: #ffffff;
+  border-radius: 1px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .resource-items:hover {
@@ -409,50 +393,99 @@ ul {
   background-color: #f8f8f8;
 }
 
+/*** News Section ***/
+
+#newsSection {
+  background-image: url("blurred-background.jpg");
+  background-size: 100%;
+  height: 400px;
+  width: 100%;
+}
+
+.newsContent {
+  color: #ffffff;
+  margin: 3.5%;
+}
+
+#newsDetail {
+  font-weight: 300;
+  font-size: 2.5em;
+  height: 375px;
+  width: 500px;
+}
+
+#newsBox {
+  height: 300px;
+  width: 300px;
+  border-color: #ffffff;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 3px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 5em;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.flex-container {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
 /*** Contact Form ***/
 
 #contact_form {
-  height: 300px;
+  height: 600px;
   width: 100%;
   color: #ffffff;
-  background-color: #f8f8f8;
+  background-color: rgba(0, 0, 0, 0.2);
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 1.5em;
   text-align: center;
+  border-top: thick solid #00A8E8;
+}
+
+#contact-label {
+  color: #fff;
+  font-size: 1.5em;
+  font-family: "Noto Serif", serif;
 }
 
 #form_fields {
   margin: 0 auto;
-  margin-top: 40px;
   color: black;
-  width: 650px;
-  height: 150px;
-  display: flex;
-  justify-content: space-around;;
-  flex-wrap: wrap;
+  padding: 100px 0 0 0;
+
 }
 #name, #email {
-  width: 300px;
-  height: 40px;
+  width: 400px;
+  height: 50px;
+  margin-top: 20px;
 }
 
 input {
   border: 0;
-  border-radius: 1px;
+  border-radius: 2px;
   font-size: 12px;
 }
 
 #message {
   border: 0;
-  width: 475px;
-  border-radius: 3px;
+  width: 400px;
+  border-radius: 2px;
   height: 80px;
+  margin-top: 20px;
 }
 
 button#form_button {
   border: 0;
-  width: 100px;
+  width: 200px;
   height: 50px;
   border-radius: 3px;
   background-color: #ffffff;
